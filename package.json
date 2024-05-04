@@ -1,0 +1,27 @@
+{
+  "name": "@tskau/fastify-boilerplate",
+  "version": "0.0.0",
+  "description": "various boilerplate stuff to build fastify apps faster",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "ts-standard --fix"
+  },
+  "keywords": [],
+  "author": {
+    "name": "tskau",
+    "url": "https://github.com/tskau"
+  },
+  "maintainers": [
+    {
+      "name": "mikhail \"synzr\"",
+      "url": "https://github.com/synzr"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.4.5"
+  }
+}
