@@ -3,9 +3,11 @@ import {
   createPluginWithRuntimeConfig,
   createPluginOfCustomFields
 } from './plugin-factory'
+import createEndpointPlugin from './endpoint-creator'
 
 export {
   createPluginWithStaticConfig,
   createPluginWithRuntimeConfig,
-  createPluginOfCustomFields
+  createPluginOfCustomFields,
+  createEndpointPlugin
 }

@@ -9,7 +9,7 @@ import {
 } from 'fastify'
 import fastifyPlugin from 'fastify-plugin'
 
-export type FastifyPlugin =
+type FastifyPlugin =
   | FastifyPluginCallback<FastifyPluginOptions, RawServerDefault, FastifyTypeProvider, FastifyBaseLogger>
   | FastifyPluginAsync<FastifyPluginOptions, RawServerDefault, FastifyTypeProvider, FastifyBaseLogger>
   | Promise<{ default: FastifyPluginAsync<FastifyPluginOptions, RawServerDefault, FastifyTypeProvider, FastifyBaseLogger> }>
