@@ -1,6 +1,6 @@
 {
   "name": "@tskau/fastify-boilerplate",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "various boilerplate stuff to build fastify apps faster",
   "main": "dist/index.js",
   "scripts": {

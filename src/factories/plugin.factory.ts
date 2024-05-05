@@ -32,7 +32,7 @@ type FastifyPlugin =
  * export default createPluginWithStaticConfig<MyPluginOptions>(myPlugin, PLUGIN_CONFIGURATION)
  * ```
  *
- * @returns a new Fastify plugin that registers the given plugin with the given options
+ * @returns A new Fastify plugin that registers the given plugin with the given options
  */
 export function createPluginWithStaticConfig<Options = any> (
   plugin: FastifyPlugin,
@@ -53,8 +53,6 @@ export function createPluginWithStaticConfig<Options = any> (
  * @param plugin - The Fastify plugin to register.
  * @param optionsGenerator - A function that generates the plugin options based on the Fastify instance.
  *
- * @returns A new Fastify plugin that registers the given plugin with the generated options.
- *
  * @example
  * ```typescript
  * import { FastifyInstance } from 'fastify'
@@ -68,6 +66,8 @@ export function createPluginWithStaticConfig<Options = any> (
  *
  * export default createPluginWithRuntimeConfig<MyPluginOptions>(myPlugin, myPluginOptionsGenerator)
  * ```
+ *
+ * @returns A new Fastify plugin that registers the given plugin with the generated options.
  */
 export function createPluginWithRuntimeConfig<Options = any> (
   plugin: FastifyPlugin,
@@ -89,8 +89,6 @@ export function createPluginWithRuntimeConfig<Options = any> (
  * @param fieldsGenerator - A function that generates the custom fields based on the Fastify instance.
  * This function can return a Promise if the fields are asynchronously generated.
  *
- * @returns A new Fastify plugin that adds the generated custom fields to the Fastify instance.
- *
  * @example
  * ```typescript
  * import { FastifyInstance } from 'fastify'
@@ -108,6 +106,8 @@ export function createPluginWithRuntimeConfig<Options = any> (
  *
  * export default createPluginOfCustomFields(myCustomFieldsGenerator)
  * ```
+ *
+ * @returns A new Fastify plugin that adds the generated custom fields to the Fastify instance.
  */
 export function createPluginOfCustomFields<Fields = Object> (
   fieldsGenerator: (fastify: FastifyInstance) => Fields | Promise<Fields>

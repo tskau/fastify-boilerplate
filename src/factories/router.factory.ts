@@ -10,7 +10,7 @@ export interface RouterMapping {
  * A Fastify plugin that creates a router plugin based on a given mapping of URLs to endpoint handlers.
  *
  * @param baseUrl - The base URL for the router plugin.
- * @param mapping - An object that maps URLs to endpoint handlers.
+ * @param routes - An object that maps URLs to endpoint handlers.
  *
  * @example
  * ```typescript
@@ -29,10 +29,10 @@ export interface RouterMapping {
  */
 export default function createRouterPlugin (
   baseUrl: string,
-  mapping: RouterMapping
+  routes: RouterMapping
 ): FastifyPluginAsync {
   async function pluginImplementation (fastify: FastifyInstance): Promise<void> {
-    const endpointPlugins = Object.entries(mapping).map(([url, handlers]) => {
+    const endpointPlugins = Object.entries(routes).map(([url, handlers]) => {
       const endpointUrl = `${baseUrl}${url}`.replace(/\/{2,}/g, '/')
       return createEndpointPlugin(endpointUrl, handlers)
     })
