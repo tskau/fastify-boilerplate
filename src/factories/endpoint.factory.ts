@@ -49,7 +49,7 @@ export type EndpointHandlers = {
  * export default createEndpointPlugin('/hello', handlers)
  * ```
  *
- * @returns A Fastify plugin function.
+ * @returns A Fastify plugin that registers the handlers for the given URL and HTTP methods.
  */
 export default function createEndpointPlugin (
   url: string,
