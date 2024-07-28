@@ -3,7 +3,10 @@ import {
   createPluginWithRuntimeConfig,
   createPluginOfCustomFields
 } from './factories/plugin.factory'
-import createEndpointPlugin from './factories/endpoint.factory'
+import createEndpointPlugin, {
+  EndpointHandler,
+  EndpointHandlers
+} from './factories/endpoint.factory'
 import createRouterPlugin from './factories/router.factory'
 
 export {
@@ -11,5 +14,7 @@ export {
   createPluginWithRuntimeConfig,
   createPluginOfCustomFields,
   createEndpointPlugin,
-  createRouterPlugin
+  createRouterPlugin,
+  EndpointHandler,
+  EndpointHandlers
 }

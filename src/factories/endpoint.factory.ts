@@ -13,7 +13,7 @@ type EndpointHandlerFunction<ReplyData = void> = (
   reply: FastifyReply
 ) => Promise<ReplyData> | ReplyData
 
-type EndpointHandler<ReplyData = void> =
+export type EndpointHandler<ReplyData = void> =
   EndpointHandlerFunction<ReplyData> |
   { schema: FastifySchema, handler: EndpointHandlerFunction<ReplyData> }
 
