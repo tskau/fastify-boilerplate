@@ -122,6 +122,9 @@ export function createPluginOfCustomFields<Fields = Object> (
     for (const generatedField in generatedFields) {
       // @ts-expect-error
       void fastify.decorate(generatedField, generatedFields[generatedField])
+
+      // @ts-expect-error
+      void fastify.decorateRequest(generatedField, generatedFields[generatedField])
     }
   }
 
